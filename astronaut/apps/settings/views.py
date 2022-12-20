@@ -1,15 +1,19 @@
 from django.shortcuts import render
-from .forms import StudentRegistration
-from .models import Post
-def showformdata(request):
-    if request.method == 'POST':
-        fm = StudentRegistration(request.POST)
-        if fm.is_valid():
-            nm = fm.cleaned_data['title']
-            em = fm.cleaned_data['content']
-            reg = Post(title=nm, content=em)
-            reg.save()
+from django.views import View
 
-    else:
-        fm = StudentRegistration()
-    return render(request,'dashboard/pages/websettings.html',{'form':fm})
+from astronaut.apps.settings.models import WebParameter
+from astronaut.apps.settings.forms import SiteParametersForm
+
+
+class SiteParametersView(View):
+    def get(self, request, *args, **kwargs):
+        site_settings_form = SiteParametersForm()
+        return render(request, "dashboard/pages/websettings.html", {'site_settings_form': site_settings_form})
+
+    def post(self, request, *args, **kwargs):
+        site_settings_form = SiteParametersForm(request.POST)
+        if site_settings_form.is_valid():
+            site_settings_form.save()
+            return render(request, "dashboard/pages/websettings.html", {'site_settings_form': site_settings_form})
+        else:
+            return render(request, "dashboard/pages/websettings.html", {'site_settings_form': site_settings_form})

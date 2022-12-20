@@ -1,9 +1,11 @@
 from django.urls import path
-from . import views
+
+from astronaut.apps.dashboard.views import dashboard
+from astronaut.apps.settings.views import SiteParametersView
 
 urlpatterns = [
-	
-	path("dashboard/", views.dashboard, name="dashboard"),
-    path("dashboard/settings", views.WebsiteSettings, name="WebsiteSettings"),
+
+    path("dashboard/", dashboard, name="dashboard"),
+    path("dashboard/settings", SiteParametersView.as_view(), name="WebsiteSettings"),
 
 ]

@@ -11,11 +11,10 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-import os,sys
+import os, sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -24,10 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-gq784or$$_d4q1^b!m)t+$g1&in=gs83i8&1pq)j02$fl8hq$7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -38,10 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'astronaut.apps.home',
-    'astronaut.apps.dashboard',
-	'astronaut.apps.users',
-	'astronaut.apps.settings',
+    'astronaut.apps.home.apps.HomeConfig',
+    'astronaut.apps.dashboard.apps.DashboardConfig',
+    'astronaut.apps.users.apps.UsersConfig',
+    'astronaut.apps.settings.apps.SettingsConfig',
 ]
 
 MIDDLEWARE = [
@@ -74,24 +72,29 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'astronaut.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'astronaut_web',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#         'USER': 'astro_dbuser',
+#         'PASSWORD': 'Qsg1513!%!#',
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+#         }
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'astronaut_web',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'astro_dbuser',
-        'PASSWORD': 'Qsg1513!%!#',
-		'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-         }   
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -111,7 +114,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -123,15 +125,11 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles'), ]
-STATIC_ROOT  = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.dirname(__file__)
 sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
-
-
-
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
