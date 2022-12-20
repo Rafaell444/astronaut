@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Bredh | responsive HTML & WHMCS theme for webhosting, domains and services providers" />
+        <meta name="author" content="coodiv.net (nedjai mohamed)" />
+        <link rel="canonical" href="https://coodiv.net" />
+        <link rel="icon" href="favicon.ico" />
+        <title>Astronaut.Ge</title>
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Bredh template" />
+        <meta property="og:description" content="A responsive HTML & WHMCS theme for webhosting, domains and services providers" />
+        <meta property="og:url" content="https://coodiv.net" />
+        <meta property="og:site_name" content="Coodiv | bredh template" />
+        <meta property="og:image" content="https://coodiv.net/blog/wp-content/uploads/2022/05/placeholder.jpg" />
+        <meta property="og:image:width" content="1800" />
+        <meta property="og:image:height" content="900" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@coodiv" />
+
+        <!-- Bootstrap , fonts & icons -->
+        <link href="{% static 'front/assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'front/assets/icons-pack/fontawesome-5/css/all.css' %}" rel="stylesheet" />
+
+        <!-- main css file -->
+        <link href="{% static 'front/assets/css/main.min.css' %}" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- საიტის body -->
+
+        <div class="preloader">
+            <!-- პრე_ლოადერი -->
+            <div class="preloader-container">
+                <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                    <circle fill="#675cda" stroke="none" cx="6" cy="50" r="6">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15" repeatCount="indefinite" begin="0.1" />
+                    </circle>
+                    <circle fill="#675cda" stroke="none" cx="30" cy="50" r="6">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10" repeatCount="indefinite" begin="0.2" />
+                    </circle>
+                    <circle fill="#675cda" stroke="none" cx="54" cy="50" r="6">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.3" />
+                    </circle>
+                </svg>
+                <span>loading</span>
+            </div>
+        </div>
+        <!-- დასასრული -->
+
+        <!-- აქ იტვირთება საიტის კონტენტი -->
+        {% block content %}
+        {% endblock %}
+        
+        <!-- ჩატვირთვის დასასრული -->
+        <!-- jquery -->
+        <script src="{% static 'front/assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/popper.min.js' %}"></script>
+        <!-- bootstrap JavaScript -->
+        <script src="{% static 'front/assets/js/bootstrap.min.js' %}"></script>
+        <!-- template JavaScript -->
+        <script src="{% static 'front/assets/js/template-scripts.js' %}"></script>
+        <!-- flickity JavaScript -->
+        <script src="{% static 'front/assets/js/flickity.pkgd.min.js' %}"></script>
+        <!-- carousel JavaScript -->
+        <script src="{% static 'front/assets/owlcarousel/owl.carousel.min.js' %}"></script>
+        <!-- parallax JavaScript -->
+        <script src="{% static 'front/assets/js/parallax.min.js' %}"></script>
+        <!-- mailchamp JavaScript -->
+        <script src="{% static 'front/assets/js/mailchamp.js' %}"></script>
+        <!-- bootstrap offcanvas -->
+        <script src="{% static 'front/assets/js/bootstrap.offcanvas.min.js' %}"></script>
+        <!-- touchSwipe JavaScript -->
+        <script src="{% static 'front/assets/js/jquery.touchSwipe.min.js' %}"></script>
+        <!-- seconde style additionel JavaScript -->
+        <script src="{% static 'front/assets/js/particles-code.js' %}"></script>
+        <script src="{% static 'front/assets/js/particles.js' %}"></script>
+        <script src="{% static 'front/assets/js/smoothscroll.js' %}"></script>
+    </body>
+</html>

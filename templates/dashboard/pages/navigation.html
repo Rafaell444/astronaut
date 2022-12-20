@@ -1,0 +1,183 @@
+{% load static %}
+{% block navigation %}
+<nav class="side-nav">
+    <a href="" class="intro-x flex items-center pl-5 pt-4">
+        <img alt="Midone - HTML Admin Template" class="w-6" src="{% static 'dashboard/dist/images/logo.svg' %}">
+        <span class="hidden xl:block text-white text-lg ml-3"> Rubick </span> 
+    </a>
+    <div class="side-nav__devider my-6"></div>
+    <ul>
+        <li>
+            <a href="javascript:;.html" class="side-menu side-menu--active">
+                <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
+                <div class="side-menu__title">
+
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="side-menu-light-post.html" class="side-menu">
+                <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
+                <div class="side-menu__title"> Post </div>
+            </a>
+        </li>
+        <li>
+            <a href="side-menu-light-calendar.html" class="side-menu">
+                <div class="side-menu__icon"> <i data-lucide="calendar"></i> </div>
+                <div class="side-menu__title"> Calendar </div>
+            </a>
+        </li>
+        <li class="side-nav__devider my-6"></li>
+        <li>
+            <a href="javascript:;" class="side-menu">
+                <div class="side-menu__icon"> <i data-lucide="edit"></i> </div>
+                <div class="side-menu__title">
+                    Crud 
+                    <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                </div>
+            </a>
+            <ul class="">
+                <li>
+                    <a href="side-menu-light-crud-data-list.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Data List </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-light-crud-form.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Form </div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="side-nav__devider my-6"></li>
+        <li>
+            <a href="javascript:;" class="side-menu">
+                <div class="side-menu__icon"> <i data-lucide="inbox"></i> </div>
+                <div class="side-menu__title">
+                    Components 
+                    <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                </div>
+            </a>
+            <ul class="">
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title">
+                            Table 
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="side-menu-light-regular-table.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="zap"></i> </div>
+                                <div class="side-menu__title">Regular Table</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="side-menu-light-tabulator.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="zap"></i> </div>
+                                <div class="side-menu__title">Tabulator</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title">
+                            Overlay 
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="side-menu-light-modal.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="zap"></i> </div>
+                                <div class="side-menu__title">Modal</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="side-menu-light-slide-over.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="zap"></i> </div>
+                                <div class="side-menu__title">Slide Over</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="side-menu-light-notification.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="zap"></i> </div>
+                                <div class="side-menu__title">Notification</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="side-menu-light-tab.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Tab </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-light-accordion.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Accordion </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-light-button.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Button </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-light-alert.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Alert </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-light-progress-bar.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Progress Bar </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-light-tooltip.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Tooltip </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-light-dropdown.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Dropdown </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-light-typography.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Typography </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-light-icon.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Icon </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-light-loading-icon.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Loading Icon </div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+</nav>
+
+{% endblock %}
